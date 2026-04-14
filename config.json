@@ -1,0 +1,15 @@
+{
+  "keywords": ["穿搭", "美妆", "旅行"],
+  "scanLimitPerKeyword": 20,
+  "minLikes": 20,
+  "sort": "time_descending",
+  "imageOnly": true,
+  "imageDir": "/Volumes/T7/rednote",
+  "dbPath": "./data/posts.db",
+  "reportDir": "./reports",
+  "browserDataDir": "./browser_data",
+  "headless": false,
+  "delayBetweenRequestsMs": 3000,
+  "scrollTimes": 3,
+  "baseUrl": "https://www.xiaohongshu.com"
+}
