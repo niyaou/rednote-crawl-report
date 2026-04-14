@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
+    "login": "node src/login.js",
     "start:config": "node src/index.js config.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

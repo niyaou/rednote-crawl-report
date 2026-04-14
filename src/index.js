@@ -20,6 +20,16 @@ async function main() {
   const db = new PostDatabase(config.dbPath);
   const crawler = new RedNoteCrawler(config, db);
 
+  let shuttingDown = false;
+  process.on('SIGINT', async () => {
+    if (shuttingDown) return;
+    shuttingDown = true;
+    console.log('\n\nReceived Ctrl+C. Shutting down gracefully...');
+    db.close();
+    await crawler.close();
+    process.exit(0);
+  });
+
   try {
     await crawler.init();
     await crawler.ensureLogin();
